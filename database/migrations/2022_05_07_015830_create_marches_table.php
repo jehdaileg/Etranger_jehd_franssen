@@ -20,7 +20,6 @@ return new class extends Migration
             $table->id();
             $table->string('nom_marche');
             $table->foreignIdFor(Ville::class)->constrained();
-            $table->foreignIdFor(Marchandise::class)->constrained();
             $table->foreignIdFor(Adresse::class)->constrained();
             $table->string('localisation');
             $table->string('type_marche');

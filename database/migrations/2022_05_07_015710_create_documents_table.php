@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\TypeDocument;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,6 +18,7 @@ return new class extends Migration
             $table->id();
             $table->string('nom_document');
             $table->string('image_document')->nullable();
+            $table->foreignIdFor(TypeDocument::class)->constrained();
             $table->timestamps();
         });
     }
