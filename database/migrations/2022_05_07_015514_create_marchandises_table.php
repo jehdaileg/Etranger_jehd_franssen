@@ -18,7 +18,7 @@ return new class extends Migration
             $table->id();
             $table->string('nom_marchandise');
             $table->integer('prix')->default(0);
-            $table->foreignIdFor(Marche::class)->constrained();
+            $table->foreignIdFor(Marche::class)->nullable()->constrained();
             $table->timestamps();
         });
     }

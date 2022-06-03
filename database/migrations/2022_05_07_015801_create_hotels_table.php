@@ -16,7 +16,7 @@ return new class extends Migration
     {
         Schema::create('hotels', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Adresse::class)->constrained();
+            $table->foreignIdFor(Adresse::class)->nullable()->constrained();
             $table->string('nom_hotel');
             $table->string('localisation');
             $table->integer('nbre_chambre');

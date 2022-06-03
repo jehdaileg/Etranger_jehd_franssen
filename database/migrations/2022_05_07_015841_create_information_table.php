@@ -16,7 +16,7 @@ return new class extends Migration
     {
         Schema::create('information', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(TypeInformation::class)->constrained();
+            $table->foreignIdFor(TypeInformation::class)->nullable()->constrained();
             $table->string('titre');
             $table->text('description');
             $table->string('image')->nullable();

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->id();
             $table->string('nom_document');
             $table->string('image_document')->nullable();
-            $table->foreignIdFor(TypeDocument::class)->constrained();
+            $table->foreignIdFor(TypeDocument::class)->nullable()->constrained();
             $table->timestamps();
         });
     }

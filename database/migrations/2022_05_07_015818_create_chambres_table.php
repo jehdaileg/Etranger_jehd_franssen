@@ -18,7 +18,7 @@ return new class extends Migration
             $table->id();
             $table->string('num_chambre');
             $table->string('description_chambre');
-            $table->foreignIdFor(Hotel::class)->constrained();
+            $table->foreignIdFor(Hotel::class)->nullable()->constrained();
             $table->string('image_bedroom')->nullable();
             $table->string('disponibilite')->default('oui');
             $table->timestamps();

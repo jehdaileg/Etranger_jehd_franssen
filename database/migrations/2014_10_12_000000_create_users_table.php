@@ -29,12 +29,12 @@ return new class extends Migration
             $table->timestamps();
             $table->integer('statut_user');
 
-            $table->foreignIdFor(Role::class)->constrained();
-            $table->foreignIdFor(Hotel::class)->constrained();
-            $table->foreignIdFor(Universite::class)->constrained();
-            $table->foreignIdFor(Document::class)->constrained();
-            $table->foreignIdFor(Marche::class)->constrained();
-            $table->foreignIdFor(Provenance::class)->constrained();
+            $table->foreignIdFor(Role::class)->nullable()->constrained();
+            $table->foreignIdFor(Hotel::class)->nullable()->constrained();
+            $table->foreignIdFor(Universite::class)->nullable()->constrained();
+            $table->foreignIdFor(Document::class)->nullable()->constrained();
+            $table->foreignIdFor(Marche::class)->nullable()->constrained();
+            $table->foreignIdFor(Provenance::class)->nullable()->constrained();
 
         });
     }

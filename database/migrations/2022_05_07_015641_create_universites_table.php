@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('nom_universite');
             $table->string('image_universite');
             $table->string('site_universite');
-            $table->foreignIdFor(Ville::class)->constrained();
-            $table->foreignIdFor(Adresse::class)->constrained();
+            $table->foreignIdFor(Ville::class)->nullable()->constrained();
+            $table->foreignIdFor(Adresse::class)->nullable()->constrained();
             $table->timestamps();
         });
     }
